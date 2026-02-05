@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shadow Dodge: Ultimate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="menu">
+  <h1>SHADOW DODGE</h1>
+  <h2>Ultimate Edition</h2>
+  <p class="subtitle">Survive. Adapt. Overcome.</p>
+  <button onclick="startGame()">▶ START</button>
+  <p class="controls">
+    Move: WASD / Arrows<br>
+    Skill: SPACE
+  </p>
+</div>
+
+<canvas id="game"></canvas>
+
+<div id="hud">
+  <span>Score: <b id="score">0</b></span>
+  <span>Best: <b id="best">0</b></span>
+  <span>Skill CD: <b id="cooldown">Ready</b></span>
+</div>
+
+<div id="skillSelect" class="hidden">
+  <h2>Choose Your Ability</h2>
+  <button onclick="chooseSkill('dash')">🌀 Dash</button>
+  <button onclick="chooseSkill('shield')">🛡 Shield</button>
+  <button onclick="chooseSkill('slow')">🕒 Time Slow</button>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
