@@ -2,90 +2,50 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+  font-family: system-ui, -apple-system;
 }
 
 body {
-  background: #000;
-  color: #fff;
+  background: black;
+  color: white;
   overflow: hidden;
 }
 
 canvas {
-  display: none;
-  background: radial-gradient(circle at center, #111, #000);
-}
-
-#menu {
   position: fixed;
   inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle, #111, #000);
-  text-align: center;
+  z-index: 1;
 }
 
-#menu h1 {
-  font-size: 3.5rem;
-  letter-spacing: 4px;
-}
-
-#menu h2 {
-  margin-top: 10px;
-  opacity: 0.8;
-}
-
-.subtitle {
-  margin: 15px 0;
-  opacity: 0.6;
-}
-
-button {
-  margin-top: 20px;
-  padding: 14px 40px;
-  font-size: 1.2rem;
-  background: #fff;
-  color: #000;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #ddd;
-}
-
-.controls {
-  margin-top: 20px;
-  font-size: 0.9rem;
-  opacity: 0.5;
-}
-
-#hud {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  display: none;
-  gap: 20px;
-  font-size: 1rem;
-}
-
-#skillSelect {
+#menu, #skillSelect {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.92);
+  z-index: 10;
+  background: rgba(0,0,0,0.85);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-}
-
-#skillSelect button {
-  margin: 10px;
-  width: 220px;
+  justify-content: center;
+  gap: 16px;
 }
 
 .hidden {
   display: none;
+}
+
+button {
+  padding: 14px 28px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+}
+
+#hud {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  gap: 20px;
 }
